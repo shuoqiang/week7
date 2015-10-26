@@ -6,9 +6,13 @@ function Bubble(){
     this.x = random(width);
     this.y = random(height);
     this.r = 20;//r for radius is 1/2 the width of the circle
-    //draw the bubble
     this.bubbleSize = this.r*2;//width and height are twice the radius
+    //method:draw the bubble
+    this.drawBubble = function(){
         ellipse(this.x,this.y,this.bubbleSize,this.bubbleSize);
+    }
+
+
 }//end Bubble
 
 function setup(){
@@ -19,17 +23,13 @@ function setup(){
     //test:var myArray = ["hello",3,"bye"];
     var myArray=[];//create blank array
 
-    for(var i=0;i<10;i++){
+    for(var i=0;i<100;i++){
     //add Bubbles to the array
     myArray[i] = new Bubble();
+    myArray[i].drawBubble();//runs draw bubble function
     }
-
-    //add stuff to the array with a loop
-    for(var i=0; i<1000;i++){
-        //myArray[i] = "item"+i;
-        //myArray[i]=i;
-        myArray[i]= ellipse(i,i,10,10);
-    }
+    //log out the array
+     console.log(myArray);
 
     //loop to go through every item in the array
     for(var i=0;i<myArray.length;i++){
