@@ -16,9 +16,9 @@ function Bubble(){
         fill(r,g,b);
         ellipse(this.x,this.y,this.bubbleSize,this.bubbleSize);
     }
-this.changeColor = function(){
+    this.changeColor = function(){
     console.log("changeColor");
-        r = random(255);
+    r = random(255);
     g = random(255);
     b = random(255);
     this.drawBubble();
@@ -56,9 +56,8 @@ function setup(){
           d = dist(mouseX, mouseY, myArray[i].x, myArray[i].y);
 //          console.log("distance",d);
           if (d<myArray[i].r){
-              // Pick new random color values
-   myArray[i].changeColor();
-          }//end if statemant
+          myArray[i].changeColor();
+          }//end if statement
        }//end for
 
 }// end mousePressed
