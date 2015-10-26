@@ -9,6 +9,7 @@ function Bubble(){
     this.bubbleSize = this.r*2;//width and height are twice the radius
     //method:draw the bubble
     this.drawBubble = function(){
+        fill('Lavender');
         ellipse(this.x,this.y,this.bubbleSize,this.bubbleSize);
     }
 
@@ -41,3 +42,8 @@ function setup(){
 
 }//end setup
 
+//listen for mouse presses with the bulit-in p5 mousePressed method
+function mousePressed(){
+    //check that this is working
+    console.log("mouse pressed");
+}
